@@ -1,0 +1,188 @@
+ /* import google fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,200;1,200&display=swap');
+ 
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: bold;
+    color: white;
+    /* border: 1px solid black; */
+} 
+
+body{
+    background-color: #F6F4F8;
+}
+
+button{
+    width: 50px;
+    height: 30px;
+    background-color: rgba(29, 49, 36, 0.596);
+    border-radius: 8px;
+}
+
+button:hover{
+    background-color: #1d3124d7;
+}
+
+
+.calcul-box{
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    background-color: #BACEC1;
+    box-shadow: 0 4px 8px 0 #ad8004b0;
+    transition: 0.3s;
+    border-radius: 2px;
+    width: 500px;
+    height: 600px;
+    grid-gap: 0px 0px;
+    grid-template-areas: 
+        'title title title title title title'
+        'header header header header header header'
+        'nav nav nav nav nav nav'
+        'numbers numbers numbers numbers operations operations'
+        'numbers numbers numbers numbers operations operations'
+        'numbers numbers numbers numbers operations operations'
+        'numbers numbers numbers numbers operations operations';
+}
+
+.calcul-title{
+    grid-area: title;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.calcul-title h1{
+    text-shadow: 2px 2px #e59560bd;
+    font-size: 30px;
+}
+
+.calcul-box .calcul-header{
+    grid-area: header;
+    width: 92%;
+    height:100px;
+    margin: 5px;
+}
+
+.calcul-box .calcul-header textarea{
+    width: 450px;
+    height: 55px;
+    margin: 25px;
+    margin-bottom: 0;
+    background-color:  #f6f4f8b7;
+    border-radius: 10px;
+}
+
+.clacul-nav {
+    height:50px;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    width: 92%;
+    margin: 5px;
+}
+
+.clacul-nav .clacul-nav-item{
+    text-align: center;
+    font-size: 20px;
+}
+
+.calcul-numbers{
+    grid-area: numbers;
+    /* background-color: #1d3124d7; */
+    margin: 25px;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: 0;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.calcul-numbers > div {
+        flex: 1 1 33%;
+        align-items: center;
+        padding:5px;
+    }
+
+.clacul-number{   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.clacul-number button{   
+    width: 50px;
+    height: 50px;
+    background-color: #e59560d3;
+}
+
+.clacul-number button:hover{
+    background-color: #e59560;
+}
+
+.clacul-operations{
+    grid-area: operations;
+    /* background-color: #1d3124d7; */
+    margin-right: 10px;
+    width: 150px;
+    height: 300px;
+    align-items: center;
+    display: grid;
+    justify-content: space-around;
+    grid-gap: 10px 0px;
+    grid-template:
+        'multi plus'
+        'divsion plus'
+        'minus plus'
+        'equal equal';
+}
+
+.clacul-op{
+    width: 80px;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.clacul-op button{
+    width: 60px;
+    height: 100%;
+}
+
+.clacul-op-plus{
+    grid-area: plus;
+}
+
+.clacul-op-minus{
+    grid-area: minus;
+}
+
+.clacul-op-multi{
+    grid-area: multi;
+}
+
+.clacul-op-divsion{
+    grid-area: divsion;
+}
+
+.clacul-op-equal{
+    grid-area: equal;
+    width: auto;
+}
+
+.clacul-op-equal button{
+    width: 130px;
+    background-color: rgba(29, 49, 36, 0.596);;
+}
